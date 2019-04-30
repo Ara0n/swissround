@@ -5,10 +5,10 @@ class Player:
 		self.score = 0
 		self.hasPlayed = []
 
-	def victoire(self):
+	def victory(self):
 		self.score += 3
 
-	def egalite(self):
+	def draw(self):
 		self.score += 1
 
 
