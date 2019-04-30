@@ -81,3 +81,10 @@ class Tournament:
 
 	def updateRank(self):
 		self.ranking = mergeSort(self.ranking)
+
+		# the Bye must be the last player
+		for i in range(len(self.ranking)-1):
+			if self.ranking[i].name == "Bye":
+				temp = self.ranking[i]
+				self.ranking[i] = self.ranking[i+1]
+				self.ranking[i+1] = temp
