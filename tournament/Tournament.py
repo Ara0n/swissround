@@ -1,6 +1,7 @@
 from math import ceil, log2
 from tournament.Player import Player
 from tournament.Match import Match
+from copy import copy
 
 
 def merge(a, b):
@@ -43,6 +44,7 @@ def mergeSort(a):
 
 	return r
 
+
 class Tournament:
 	def __init__(self, playerList, Game, bo):
 		self.ranking = playerList
@@ -58,7 +60,8 @@ class Tournament:
 			self.ranking.append(Player("Bye", None))
 
 	def createRound(self):
-		tempMM = self.ranking
+		self.round.clear()
+		tempMM = self.ranking.copy()
 
 		while len(tempMM) > 0:
 			opponent = 1
