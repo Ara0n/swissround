@@ -1,3 +1,6 @@
+from math import floor, ceil, log2
+
+
 def infoSwiss(nbJ):
 	nbRounds = ceil(log2(nbJ))
 	nbMpR = floor(nbJ/2)
