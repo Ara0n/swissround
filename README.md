@@ -32,3 +32,4 @@ The final order for the rankings is available in `Tournament.ranking`, individua
 - Your `Game` object have access to the 2 player objects that fight each other in the match
 - A best-of format is a format where a maximum number of games possible per match is declared, the one with the most wins at the end if the best-of wins the match. *If there is more draws than victories for one or the other player the entire match is considered drawn*
 - if the number of player is odd, a fictive player player is created: the "Bye". The "Bye" must stay at 0 points and a the end of the rankings. The player playing against the "Bye" will be awarded an auto-win. Only one Bye can be awarded per player during the entire tournament.
+- the tournament doesn't switch sides for the players automatically, if you want to make them alternate positions, add it in the `play()` method. Beware that even if you switch p1 victory still has to be 1 and p2 victory 2 for the value of `results`
