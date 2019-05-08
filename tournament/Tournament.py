@@ -1,7 +1,7 @@
 from math import ceil, log2
 from tournament.Player import Player
 from tournament.Match import Match
-from copy import copy
+
 
 
 def merge(a, b):
