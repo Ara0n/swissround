@@ -1,6 +1,6 @@
 from math import ceil, log2
-from tournament.Player import Player
-from tournament.Match import Match
+from .Player import Player
+from .Match import Match
 
 
 
