@@ -3,7 +3,6 @@ from tournament.Player import Player
 from tournament.Match import Match
 
 
-
 def merge(a, b):
 	c = []
 
@@ -59,7 +58,7 @@ class Tournament:
 		if self.nbPlayer%2 == 1:
 			self.ranking.append(Player("Bye", None))
 
-	def createRound(self):
+	def create_round(self):
 		self.round.clear()
 		tempMM = self.ranking.copy()
 
@@ -74,12 +73,12 @@ class Tournament:
 			tempMM.pop(opponent)
 			tempMM.pop(0)
 
-	def playRound(self):
+	def play_round(self):
 		for match in self.round:
 			match.play()
 		self.roundsPlayed += 1
 
-	def updateRank(self):
+	def update_rank(self):
 		self.ranking = mergeSort(self.ranking)
 
 		# the Bye must be the last player
