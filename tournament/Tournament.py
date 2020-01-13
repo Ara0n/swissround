@@ -64,7 +64,7 @@ class Tournament:
 
 		while len(tempMM) > 0:
 			opponent = 1
-			while (tempMM[opponent] in tempMM[0].hasPlayed) and opponent < len(tempMM):
+			while opponent < len(tempMM) and (tempMM[opponent] in tempMM[0].hasPlayed):
 				opponent += 1
 			if opponent == len(tempMM):
 				opponent = 1
